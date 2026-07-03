@@ -1,9 +1,10 @@
-import './App.scss';
+import "./App.scss";
+import Translator from "./components/Translator/Translator";
 
 function App() {
   return (
     <>
-      <h1>Hello World</h1>
+      <Translator />
     </>
   );
 }
