@@ -1,6 +1,6 @@
 import { morseCode, reverseMorseCode } from "../data/morse.js";
 
-const engToMorse = (text) => {
+export const engToMorse = (text) => {
   return text
 
     .toUpperCase()
@@ -15,7 +15,7 @@ const engToMorse = (text) => {
     .join(" / "); // joins words with " / "
 };
 
-const morseToEng = (morse) => {
+export const morseToEng = (morse) => {
   return morse
     .split(" / ")
     .map((word) =>
