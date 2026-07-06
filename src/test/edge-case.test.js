@@ -55,7 +55,7 @@ describe("Edge Case Tests", () => {
     });
 
     test("E-010 | morseToEng ignores special characters", () => {
-      expect(morseToEng(".... . .-.. .-.. ---")).toBe("HELLO");
+      expect(morseToEng("!.... . .-.. .-.. ---@")).toBe("HELLO");
     });
   });
 
