@@ -82,7 +82,7 @@ npm test
 | E-002 | Empty input   | morseToEng handles empty input        | ""                     | ""                                          | Pass               |
 | E-003 | Invalid input | engToMorse ignores special characters | !@#$                   | ""                                          | Pass               |
 | E-004 | Invalid input | morseToEng ignores invalid Morse code | ...---...              | ""                                          | Pass               |
-| E-005 | Whitespace    | trim leading/trailing spaces (eng)    | hello                  | .... . .-.. .-.. ---                        | **Fail**           |
+| E-005 | Whitespace    | trim leading/trailing spaces (eng)    | hello                  | .... . .-.. .-.. ---                        | Pass               |
 | E-006 | Whitespace    | trim leading/trailing spaces (morse)  | .... . .-.. .-.. ---   | HELLO                                       | Pass               |
 | E-007 | Whitespace    | multiple spaces between words (eng)   | hello world            | .... . .-.. .-.. --- / .-- --- .-. .-.. -.. | **Fail**           |
 | E-008 | Whitespace    | multiple separators in Morse          | .... / / / .           | HE                                          | Pass               |
