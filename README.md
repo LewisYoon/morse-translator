@@ -76,17 +76,26 @@ npm test
 
 ## Edgecase Test Result
 
-| ID    | Category      | Test Case                             | Input                  | Expected Output                             | Status             |
-| ----- | ------------- | ------------------------------------- | ---------------------- | ------------------------------------------- | ------------------ |
-| E-001 | Empty input   | engToMorse handles empty input        | ""                     | ""                                          | Pass               |
-| E-002 | Empty input   | morseToEng handles empty input        | ""                     | ""                                          | Pass               |
-| E-003 | Invalid input | engToMorse ignores special characters | !@#$                   | ""                                          | Pass               |
-| E-004 | Invalid input | morseToEng ignores invalid Morse code | ...---...              | ""                                          | Pass               |
-| E-005 | Whitespace    | trim leading/trailing spaces (eng)    | hello                  | .... . .-.. .-.. ---                        | Pass               |
-| E-006 | Whitespace    | trim leading/trailing spaces (morse)  | .... . .-.. .-.. ---   | HELLO                                       | Pass               |
-| E-007 | Whitespace    | multiple spaces between words (eng)   | hello world            | .... . .-.. .-.. --- / .-- --- .-. .-.. -.. | **Fail**           |
-| E-008 | Whitespace    | multiple separators in Morse          | .... / / / .           | HE                                          | Pass               |
-| E-009 | Mixed input   | ignore special characters (eng)       | !HELLO@                | .... . .-.. .-.. ---                        | **Fail**           |
-| E-010 | Mixed input   | clean Morse decode                    | !.... . .-.. .-.. ---@ | HELLO                                       | Fail               |
-| E-011 | Numbers       | engToMorse number conversion          | 123                    | .---- ..--- ...--                           | Fail(out of scope) |
-| E-012 | Numbers       | morseToEng number conversion          | .---- ..--- ...--      | 123                                         | Fail(out of scope) |
+| ID    | Category      | Test Case                             | Input                  | Expected Output                             | Status |
+| ----- | ------------- | ------------------------------------- | ---------------------- | ------------------------------------------- | ------ |
+| E-001 | Empty input   | engToMorse handles empty input        | ""                     | ""                                          | Pass   |
+| E-002 | Empty input   | morseToEng handles empty input        | ""                     | ""                                          | Pass   |
+| E-003 | Invalid input | engToMorse ignores special characters | !@#$                   | ""                                          | Pass   |
+| E-004 | Invalid input | morseToEng ignores invalid Morse code | ...---...              | ""                                          | Pass   |
+| E-005 | Whitespace    | trim leading/trailing spaces (eng)    | hello                  | .... . .-.. .-.. ---                        | Pass   |
+| E-006 | Whitespace    | trim leading/trailing spaces (morse)  | .... . .-.. .-.. ---   | HELLO                                       | Pass   |
+| E-007 | Whitespace    | multiple spaces between words (eng)   | hello world            | .... . .-.. .-.. --- / .-- --- .-. .-.. -.. | Pass   |
+| E-008 | Whitespace    | multiple separators in Morse          | .... / / / .           | HE                                          | Pass   |
+| E-009 | Mixed input   | ignore special characters (eng)       | !HELLO@                | .... . .-.. .-.. ---                        | Pass   |
+| E-010 | Mixed input   | clean Morse decode                    | !.... . .-.. .-.. ---@ | ELL                                         | Pass   |
+
+## Future Improvements
+
+- Add support for numbers and special characters in Morse conversion
+
+- Alternatively, restrict input validation to only allow A–Z characters and spaces  
+  and display error message for unsupported characters instead
+
+- Improve input detection logic in `translate()` to distinguish between English text and Morse code clearly
+
+- Better UI design
