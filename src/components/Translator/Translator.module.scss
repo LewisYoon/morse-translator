@@ -1,14 +1,9 @@
 .wrapper {
   min-height: 100vh;
-
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-
   gap: 1.5rem;
-
   padding: 2rem;
-
-  background: linear-gradient(180deg, var(--bg), rgba(0, 0, 0, 0.05));
 }

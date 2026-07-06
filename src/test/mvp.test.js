@@ -1,66 +1,66 @@
 import { engToMorse, morseToEng, translate } from "../utils/translate.js";
 
-describe("MVP - english to morse && morse to english", () => {
-  // Eng to Morse
+describe("MVP Tests", () => {
+  // English to morse MVP function
+  describe("engToMorse()", () => {
+    test("M-001 | single letter", () => {
+      expect(engToMorse("A")).toBe(".-");
+    });
 
-  test("engToMorse - single letter", () => {
-    expect(engToMorse("A")).toBe(".-");
+    test("M-002 | multiple letters", () => {
+      expect(engToMorse("AB")).toBe(".- -...");
+    });
+
+    test("M-003 | single word", () => {
+      expect(engToMorse("hello")).toBe(".... . .-.. .-.. ---");
+    });
+
+    test("M-004 | multiple words", () => {
+      expect(engToMorse("hello world")).toBe(
+        ".... . .-.. .-.. --- / .-- --- .-. .-.. -..",
+      );
+    });
+
+    test("M-005 | uppercase input", () => {
+      expect(engToMorse("heLlO")).toBe(".... . .-.. .-.. ---");
+    });
   });
 
-  test("engToMorse - Multiple letter", () => {
-    expect(engToMorse("AB")).toBe(".- -...");
+  // Morse to English MVP function
+
+  describe("morseToEng()", () => {
+    test("M-006 | single letter", () => {
+      expect(morseToEng(".-")).toBe("A");
+    });
+
+    test("M-007 | multiple letters", () => {
+      expect(morseToEng(".- -...")).toBe("AB");
+    });
+
+    test("M-008 | single word", () => {
+      expect(morseToEng(".... . .-.. .-.. ---")).toBe("HELLO");
+    });
+
+    test("M-009 | multiple words", () => {
+      expect(morseToEng(".... . .-.. .-.. --- / .-- --- .-. .-.. -..")).toBe(
+        "HELLO WORLD",
+      );
+    });
+
+    test("M-010 | word separation", () => {
+      expect(morseToEng(".... . / .-.. ---")).toBe("HE LO");
+    });
   });
 
-  test("engToMorse - multiple words", () => {
-    expect(engToMorse("hello world")).toBe(
-      ".... . .-.. .-.. --- / .-- --- .-. .-.. -..",
-    );
-  });
+  //Auto detect function (Bonus MVP)
 
-  test("engToMorse - single word", () => {
-    expect(engToMorse("hello")).toBe(".... . .-.. .-.. ---");
-  });
+  describe("translate()", () => {
+    test("M-011 | detects English input", () => {
+      expect(translate("he")).toBe(".... .");
+    });
 
-  test("engToMorse - multiple words", () => {
-    expect(engToMorse("hello world")).toBe(
-      ".... . .-.. .-.. --- / .-- --- .-. .-.. -..",
-    );
-  });
-
-  test("engToMorse - to uppercase", () => {
-    expect(engToMorse("heLlO")).toBe(".... . .-.. .-.. ---");
-  });
-
-  // Morse to Eng
-  test("morseToEng - single morse code (letter)", () => {
-    expect(morseToEng(".-")).toBe("A");
-  });
-
-  test("morseToEng - multiple morse code (letter)", () => {
-    expect(morseToEng(".- -...")).toBe("AB");
-  });
-
-  test("morseToEng - single morse code (word)", () => {
-    expect(morseToEng(".... . .-.. .-.. ---")).toBe("HELLO");
-  });
-
-  test("morseToEng - multiple morse code (words)", () => {
-    expect(morseToEng(".... . .-.. .-.. --- / .-- --- .-. .-.. -..")).toBe(
-      "HELLO WORLD",
-    );
-  });
-
-  test("morseToEng - check word separation using / ", () => {
-    expect(morseToEng(".... . / .-.. ---")).toBe("HE LO");
-  });
-
-  // Bonus MVP (auto detect input)
-
-  test("translate - detects English input", () => {
-    expect(translate("he")).toBe(".... .");
-  });
-
-  test("translate - detects Morse input", () => {
-    expect(translate(".... .")).toBe("HE");
+    test("M-012 | detects Morse input", () => {
+      expect(translate(".... .")).toBe("HE");
+    });
   });
 });
