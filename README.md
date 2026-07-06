@@ -1,34 +1,55 @@
-#Morse Code Translator
+# Morse Translator (React)
 
 A simple React application that translates between English text and Morse code.
 
-Features
+---
 
-#MVP
+## Features
+
+### MVP
 
 - Translate English text to Morse code
 - Translate Morse code to English
 - Correctly separates Morse characters with spaces
-- Uses / to separate words in Morse code
+- Uses `/` to separate words in Morse code
 - Non-DOM logic is unit tested with Jest
 
-#Bonus
+### Bonus
 
-- Automatically detects whether the input is English or Morse code
-- Translates to the opposite format without requiring the user to select a translation mode
+- Automatically detects whether input is English or Morse code
+- Translates to the opposite format without requiring mode selection
 
-#Tech Stack
+---
+
+## Tech Stack
 
 - React
 - JavaScript (ES6)
 - SCSS Modules
 - Jest
 
-#Testing
+---
+
+## Testing Strategy
 
 The project includes Jest unit tests for all non-DOM translation logic.
 
-Tests are separated into:
+### Test Structure
 
-- MVP Tests – verifies the core translation functionality.
-- Edge Case Tests – verifies behaviour for invalid or unusual inputs.
+- **MVP Tests**
+  - Core translation logic
+  - Basic word/character conversion
+
+- **Edge Case Tests**
+  - Invalid characters
+  - Empty input
+  - Mixed or unusual input formats
+
+---
+
+## How to Run Tests
+
+```bash
+npm install
+npm test
+```
