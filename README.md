@@ -61,17 +61,17 @@ npm test
 
 | ID    | Category     | Test Case               | Input                                         | Expected Output                               | Status |
 | ----- | ------------ | ----------------------- | --------------------------------------------- | --------------------------------------------- | ------ |
-| M-001 | Eng to Morse | Single letter           | "A"                                           | ".-"                                          | ✅     |
-| M-002 | Eng to Morse | Multiple letters        | "AB"                                          | ".- -..."                                     | ✅     |
-| M-003 | Eng to Morse | Single word             | "hello"                                       | ".... . .-.. .-.. ---"                        | ✅     |
-| M-004 | Eng to Morse | Multiple words          | "hello world"                                 | ".... . .-.. .-.. --- / .-- --- .-. .-.. -.." | ✅     |
-| M-005 | Eng to Morse | Uppercase handling      | "heLlO"                                       | ".... . .-.. .-.. ---"                        | ✅     |
-| M-006 | Morse to Eng | Single letter           | ".-"                                          | "A"                                           | ✅     |
-| M-007 | Morse to Eng | Multiple letters        | ".- -..."                                     | "AB"                                          | ✅     |
-| M-008 | Morse to Eng | Single word             | ".... . .-.. .-.. ---"                        | "HELLO"                                       | ✅     |
-| M-009 | Morse to Eng | Multiple words          | ".... . .-.. .-.. --- / .-- --- .-. .-.. -.." | "HELLO WORLD"                                 | ✅     |
-| M-010 | Morse to Eng | Word separation         | ".... . / .-.. ---"                           | "HE LO"                                       | ✅     |
-| M-011 | Auto Detect  | English input detection | "he"                                          | ".... ."                                      | ✅     |
-| M-012 | Auto Detect  | Morse input detection   | ".... ."                                      | "HE"                                          | ✅     |
+| M-001 | Eng to Morse | Single letter           | "A"                                           | ".-"                                          | Pass   |
+| M-002 | Eng to Morse | Multiple letters        | "AB"                                          | ".- -..."                                     | Pass   |
+| M-003 | Eng to Morse | Single word             | "hello"                                       | ".... . .-.. .-.. ---"                        | Pass   |
+| M-004 | Eng to Morse | Multiple words          | "hello world"                                 | ".... . .-.. .-.. --- / .-- --- .-. .-.. -.." | Pass   |
+| M-005 | Eng to Morse | Uppercase handling      | "heLlO"                                       | ".... . .-.. .-.. ---"                        | Pass   |
+| M-006 | Morse to Eng | Single letter           | ".-"                                          | "A"                                           | Pass   |
+| M-007 | Morse to Eng | Multiple letters        | ".- -..."                                     | "AB"                                          | Pass   |
+| M-008 | Morse to Eng | Single word             | ".... . .-.. .-.. ---"                        | "HELLO"                                       | Pass   |
+| M-009 | Morse to Eng | Multiple words          | ".... . .-.. .-.. --- / .-- --- .-. .-.. -.." | "HELLO WORLD"                                 | Pass   |
+| M-010 | Morse to Eng | Word separation         | ".... . / .-.. ---"                           | "HE LO"                                       | Pass   |
+| M-011 | Auto Detect  | English input detection | "he"                                          | ".... ."                                      | Pass   |
+| M-012 | Auto Detect  | Morse input detection   | ".... ."                                      | "HE"                                          | Pass   |
 
 ## Edgecase Test Result
