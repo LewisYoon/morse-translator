@@ -26,3 +26,10 @@ export const morseCode = {
   Y: "-.--",
   Z: "--..",
 };
+
+//reversing morseCode using for loop
+export const reverseMorseCode = {};
+
+for (const key in morseCode) {
+  reverseMorseCode[morseCode[key]] = key;
+}

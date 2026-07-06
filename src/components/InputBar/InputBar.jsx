@@ -8,7 +8,7 @@ export default function OutputBar({ value, onChange }) {
       className={classes.inputBar}
       value={value}
       onChange={onChange}
-      placeholder="Type English..."
+      placeholder="Type English or Morse code..."
       type="text"
     />
   );

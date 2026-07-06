@@ -1,15 +1,29 @@
 .inputBar {
-  width: 50%;
-  padding: 12px;
-  font-size: 16px;
-  border: 2px solid var(--green);
-  border-radius: 10px;
-  outline: none;
-  background-color: var(--bg);
+  width: 100%;
+  max-width: 700px;
 
+  padding: 1rem 1.25rem;
+
+  font-size: 1rem;
+  line-height: 1.5;
+
+  border: 2px solid var(--green);
+  border-radius: 12px;
+
+  background-color: var(--bg);
   color: var(--green);
+
+  outline: none;
+
+  transition: 0.2s ease;
+
   &::placeholder {
     color: var(--green);
-    opacity: 0.5;
+    opacity: 0.45;
+  }
+
+  &:focus {
+    border-color: #4cff9b;
+    box-shadow: 0 0 12px rgba(76, 255, 155, 0.3);
   }
 }
