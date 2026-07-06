@@ -1,4 +1,4 @@
-# Morse Translator (React)
+# Morse Translator (React + vite)
 
 A simple React application that translates between English text and Morse code.
 
@@ -24,7 +24,8 @@ A simple React application that translates between English text and Morse code.
 ## Tech Stack
 
 - React
-- JavaScript (ES6)
+- Vite
+- JavaScript
 - SCSS Modules
 - Jest
 
