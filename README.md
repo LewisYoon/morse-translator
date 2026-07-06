@@ -59,8 +59,6 @@ npm test
 
 ## MVP Test Result
 
-## 🧪 MVP Test Coverage
-
 | ID    | Category     | Test Case               | Input                                         | Expected Output                               | Status |
 | ----- | ------------ | ----------------------- | --------------------------------------------- | --------------------------------------------- | ------ |
 | M-001 | Eng to Morse | Single letter           | "A"                                           | ".-"                                          | ✅     |
