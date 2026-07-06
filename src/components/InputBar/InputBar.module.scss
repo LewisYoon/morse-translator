@@ -1,24 +1,48 @@
 .inputBar {
   width: 100%;
   max-width: 700px;
+  box-sizing: border-box;
 
-  padding: 1rem 1.25rem;
-  font-size: 1rem;
+  padding: 1.25rem 1.5rem;
+  font-size: 1.1rem;
+  font-family: var(--font-mono);
+  font-weight: 500;
+  letter-spacing: 0.05em;
 
-  border: 2px solid var(--green);
+  border: 1px solid var(--input-border);
   border-radius: 12px;
-  background-color: rgb(39, 39, 39);
+  background-color: var(--input-bg);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
   color: var(--green);
   outline: none;
-  transition: 0.2s ease;
+  caret-color: var(--green);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
 
   &::placeholder {
     color: var(--green);
     opacity: 0.45;
+    font-family: var(--font-mono);
+  }
+
+  &::selection {
+    background-color: rgba(24, 24, 27, 0.10);
+    color: var(--text-h);
+  }
+
+  &:hover {
+    border-color: var(--border-focus);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06);
   }
 
   &:focus {
-    border-color: #4cff9b;
-    box-shadow: 0 0 12px rgba(76, 255, 155, 0.3);
+    border-color: var(--green);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+    transform: translateY(-2px);
+
+    &::placeholder {
+      opacity: 0.15;
+    }
   }
 }
