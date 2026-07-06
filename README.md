@@ -3,6 +3,16 @@
 A simple React application that translates between English text and Morse code.
 
 ---
+## App screenshot
+<img width="1440" height="776" alt="Screenshot 2026-07-06 at 10 33 35 pm" src="https://github.com/user-attachments/assets/653a6612-974e-43f0-b334-31b649472b1f" />
+
+## How to Run the Project
+
+```bash
+npm install
+npm run dev
+```
+---
 
 ## Features
 
